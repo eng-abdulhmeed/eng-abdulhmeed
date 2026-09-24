@@ -151,9 +151,17 @@ developer = {
 
 ---
 
-## 📈 Engineering Activity & Daily Streak
+## 📈 Engineering Activity & Contribution Snake
 
 <div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/eng-abdulhmeed/eng-abdulhmeed/output/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/eng-abdulhmeed/eng-abdulhmeed/output/github-contribution-grid-snake.svg" />
+  <img alt="GitHub Contribution Snake Animation" src="https://raw.githubusercontent.com/eng-abdulhmeed/eng-abdulhmeed/output/github-contribution-grid-snake-dark.svg" width="100%" />
+</picture>
+
+<br/><br/>
 
 <!-- Verified High-Speed Demolab Streak Stats (Rock-Solid 200 OK) -->
 <a href="https://github.com/eng-abdulhmeed">
