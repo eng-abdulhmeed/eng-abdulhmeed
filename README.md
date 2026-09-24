@@ -213,9 +213,18 @@ flowchart TB
 
 ---
 
-## 📈 Engineering Activity & Contribution Snake
+## 📈 Engineering Activity, 3D Isometric City & Contribution Snake
 
 <div align="center">
+
+<!-- 3D Isometric Contribution City (Rendered Daily by GitHub Actions) -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-night-view.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-green-animate.svg" />
+  <img alt="3D Isometric Contribution City" src="./profile-3d-contrib/profile-night-view.svg" width="100%" />
+</picture>
+
+<br/><br/>
 
 <!-- Live Animated Contribution Snake -->
 <picture>
