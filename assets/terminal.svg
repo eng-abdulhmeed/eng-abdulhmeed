@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 440" width="100%" height="100%">
+  <defs>
+    <linearGradient id="termBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070a12"/>
+      <stop offset="100%" stop-color="#030509"/>
+    </linearGradient>
+    <linearGradient id="termBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0.35"/>
+      <stop offset="50%" stop-color="#8B5CF6" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#00F0FF" stop-opacity="0.35"/>
+    </linearGradient>
+    <radialGradient id="termGlow" cx="50%" cy="10%" r="60%">
+      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#00F0FF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <style>
+    .code { font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', Consolas, monospace; }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    .cursor { animation: blink 1s infinite ease-in-out; }
+  </style>
+
+  <!-- Terminal Window Container -->
+  <rect width="1000" height="440" rx="14" fill="url(#termBg)" stroke="url(#termBorder)" stroke-width="1.5"/>
+  <rect width="1000" height="440" rx="14" fill="url(#termGlow)"/>
+
+  <!-- Window Header Bar -->
+  <rect width="1000" height="44" rx="14" fill="rgba(255, 255, 255, 0.02)"/>
+  <line x1="0" y1="44" x2="1000" y2="44" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+
+  <!-- macOS Window Controls -->
+  <circle cx="28" cy="22" r="6.5" fill="#FF5F56"/>
+  <circle cx="48" cy="22" r="6.5" fill="#FFBD2E"/>
+  <circle cx="68" cy="22" r="6.5" fill="#27C93F"/>
+
+  <!-- Terminal Title -->
+  <text x="500" y="27" fill="#64748B" font-size="12" font-weight="600" text-anchor="middle" letter-spacing="0.5" class="code">
+    abdh@systems-node-01: ~ (zsh) • 64-bit
+  </text>
+
+  <!-- Terminal Content Lines -->
+  <g transform="translate(32, 76)">
+    <!-- Command 1: whoami -->
+    <text x="0" y="0" fill="#00F0FF" font-size="14" font-weight="700" class="code">➜</text>
+    <text x="18" y="0" fill="#E2E8F0" font-size="14" font-weight="600" class="code">whoami --verbose</text>
+
+    <!-- Output 1 -->
+    <text x="0" y="24" fill="#94A3B8" font-size="13" class="code">Name     :</text>
+    <text x="90" y="24" fill="#FFFFFF" font-size="13" font-weight="600" class="code">Eng. Abdulhmeed Abo-Hatem</text>
+    <text x="0" y="44" fill="#94A3B8" font-size="13" class="code">Title    :</text>
+    <text x="90" y="44" fill="#38BDF8" font-size="13" font-weight="600" class="code">Full-Stack Software Engineer &amp; Distributed Systems Architect</text>
+    <text x="0" y="64" fill="#94A3B8" font-size="13" class="code">Location :</text>
+    <text x="90" y="64" fill="#E2E8F0" font-size="13" class="code">Sana'a, Yemen • Available Globally (Remote / On-site Contracts)</text>
+
+    <!-- Command 2: API Query -->
+    <text x="0" y="104" fill="#00F0FF" font-size="14" font-weight="700" class="code">➜</text>
+    <text x="18" y="104" fill="#E2E8F0" font-size="14" font-weight="600" class="code">curl -s https://api.abdh.dev/v1/system-profile | jq .</text>
+
+    <!-- JSON Response -->
+    <g transform="translate(0, 126)">
+      <text x="0" y="0" fill="#94A3B8" font-size="13" class="code">{</text>
+      
+      <text x="20" y="20" fill="#8B5CF6" font-size="13" class="code">"status"</text>
+      <text x="95" y="20" fill="#94A3B8" font-size="13" class="code">:</text>
+      <text x="110" y="20" fill="#34D399" font-size="13" font-weight="600" class="code">"READY_FOR_CHALLENGES"</text>
+      <text x="285" y="20" fill="#94A3B8" font-size="13" class="code">,</text>
+
+      <text x="20" y="40" fill="#8B5CF6" font-size="13" class="code">"core_stack"</text>
+      <text x="125" y="40" fill="#94A3B8" font-size="13" class="code">:</text>
+      <text x="140" y="40" fill="#94A3B8" font-size="13" class="code">[</text>
+      <text x="150" y="40" fill="#00F0FF" font-size="13" class="code">"Laravel 12"</text>
+      <text x="245" y="40" fill="#94A3B8" font-size="13" class="code">, </text>
+      <text x="260" y="40" fill="#00F0FF" font-size="13" class="code">"Python (FastAPI &amp; aiogram)"</text>
+      <text x="480" y="40" fill="#94A3B8" font-size="13" class="code">, </text>
+      <text x="495" y="40" fill="#00F0FF" font-size="13" class="code">"Flutter"</text>
+      <text x="570" y="40" fill="#94A3B8" font-size="13" class="code">, </text>
+      <text x="585" y="40" fill="#00F0FF" font-size="13" class="code">"Docker"</text>
+      <text x="655" y="40" fill="#94A3B8" font-size="13" class="code">],</text>
+
+      <text x="20" y="60" fill="#8B5CF6" font-size="13" class="code">"database_tier"</text>
+      <text x="150" y="60" fill="#94A3B8" font-size="13" class="code">:</text>
+      <text x="165" y="60" fill="#FDE047" font-size="13" class="code">"PostgreSQL (Transactional) + Redis (In-Memory Cache)"</text>
+      <text x="615" y="60" fill="#94A3B8" font-size="13" class="code">,</text>
+
+      <text x="20" y="80" fill="#8B5CF6" font-size="13" class="code">"architecture"</text>
+      <text x="145" y="80" fill="#94A3B8" font-size="13" class="code">:</text>
+      <text x="160" y="80" fill="#38BDF8" font-size="13" class="code">"Event-Driven Microservices • Clean Architecture • Async Queues"</text>
+
+      <text x="0" y="100" fill="#94A3B8" font-size="13" class="code">}</text>
+    </g>
+
+    <!-- Command 3: Executing Deploy & Status -->
+    <text x="0" y="246" fill="#00F0FF" font-size="14" font-weight="700" class="code">➜</text>
+    <text x="18" y="246" fill="#E2E8F0" font-size="14" font-weight="600" class="code">./deploy.sh --optimize --network=production</text>
+
+    <!-- Output 3 -->
+    <text x="0" y="270" fill="#34D399" font-size="13" font-weight="600" class="code">✔ Database pooled &amp; migrated [PostgreSQL 16]</text>
+    <text x="0" y="290" fill="#34D399" font-size="13" font-weight="600" class="code">✔ Redis cache warmed [Latency: 0.8ms]</text>
+    <text x="0" y="310" fill="#34D399" font-size="13" font-weight="600" class="code">✔ Asynchronous webhook workers active [All services nominal ⚡]</text>
+
+    <!-- Blinking Prompt -->
+    <text x="0" y="336" fill="#00F0FF" font-size="14" font-weight="700" class="code">➜</text>
+    <text x="18" y="336" fill="#E2E8F0" font-size="14" class="code">abdh-node$</text>
+    <rect x="110" y="324" width="8" height="15" fill="#00F0FF" class="cursor"/>
+  </g>
+</svg>

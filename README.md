@@ -23,30 +23,65 @@
 
 ---
 
-## 👨‍💻 Executive Summary
+## 💻 Interactive Cyber Terminal
 
-```python
-"""
-Professional Engineering Profile
-"""
-developer = {
-    "name": "Eng. Abdulhmeed Abo-Hatem",
-    "title": "Full-Stack Software Engineer & Backend Architect",
-    "alma_mater": "Information Technology @ Sana'a University",
-    "core_specialties": [
-        "Distributed Backend Architecture",
-        "High-Concurrency RESTful APIs",
-        "Telegram Bot & Payment Automation",
-        "Cross-Platform Mobile Development"
-    ],
-    "engineering_values": ["Clean Architecture", "Type Safety", "Measurable Performance"]
-}
+<div align="center">
+  <img src="./assets/terminal.svg" alt="Cyber Terminal Console" width="100%" />
+</div>
+
+---
+
+## 🌐 Distributed System Architecture Blueprint
+
+> A high-level architectural view of how my production software ecosystems are structured — from client frontends and asynchronous gateway routers to microservices, in-memory caching, and relational database clusters.
+
+```mermaid
+flowchart TB
+    %% Styling Classes
+    classDef client fill:#070b19,stroke:#00F0FF,stroke-width:2px,color:#ffffff
+    classDef gateway fill:#0f172a,stroke:#38BDF8,stroke-width:2px,color:#ffffff
+    classDef service fill:#1e1b4b,stroke:#8B5CF6,stroke-width:2px,color:#ffffff
+    classDef data fill:#061412,stroke:#10B981,stroke-width:2px,color:#ffffff
+    classDef external fill:#1f1905,stroke:#F59E0B,stroke-width:1.5px,color:#ffffff
+
+    subgraph CLIENT_TIER [" 📱 Client Interfaces & Frontends "]
+        FlutterApp["📱 Flutter Mobile App\n(Cross-Platform Android & iOS)"]:::client
+        WebClient["🎨 Web Application & Canvas\n(React • Fabric.js • Tailwind)"]:::client
+        TgUsers["🤖 Telegram User Base\n(Automated Interactive Bots)"]:::client
+    end
+
+    subgraph GATEWAY_TIER [" 🛡️ Reverse Proxy & Security "]
+        NginxGateway["⚡ Nginx Reverse Proxy & Load Balancer\n(Rate Limiting • SSL Termination • Webhook Routers)"]:::gateway
+    end
+
+    subgraph SERVICES_TIER [" ⚙️ Microservices & Application Backend "]
+        LaravelCore["🔴 Laravel 12 Enterprise Engine\n(RESTful APIs • RBAC Auth • Export Pipeline)"]:::service
+        FastApiWorker["🟢 Python 3.12 Asynchronous Core\n(FastAPI • aiogram 3 • Event Dispatchers)"]:::service
+    end
+
+    subgraph STORAGE_TIER [" 🗄️ Persistence & High-Speed Cache "]
+        RedisLayer[("⚡ Redis In-Memory Cache\n(Session Store • State Machine • Message Queues)")]:::data
+        PostgreDB[("🐘 PostgreSQL Database\n(Transactional Ledger & ACID Relational Data)")]:::data
+        MySQLDB[("🐬 MySQL Database\n(Platform Records & Content Entities)")]:::data
+    end
+
+    subgraph EXT_TIER [" 🌐 External Integrations & Payment Providers "]
+        Cryptomus["💰 Cryptomus Crypto Gateway"]:::external
+        SMSGateways["📲 SMS Provider Webhooks"]:::external
+    end
+
+    FlutterApp & WebClient & TgUsers --> NginxGateway
+    NginxGateway --> LaravelCore
+    NginxGateway --> FastApiWorker
+
+    LaravelCore --> RedisLayer
+    LaravelCore --> MySQLDB
+
+    FastApiWorker --> RedisLayer
+    FastApiWorker --> PostgreDB
+    FastApiWorker <--> Cryptomus
+    FastApiWorker <--> SMSGateways
 ```
-
-- 🚀 **Full-Stack Software Engineer** with proven experience engineering end-to-end web applications, mobile apps, and automated backend infrastructure.
-- ⚙️ **Backend & Systems Specialist:** Expertise in designing scalable RESTful APIs, asynchronous job queues, and payment/webhook gateways using **Laravel 12** and **Python (FastAPI & aiogram 3)**.
-- 📱 **Client & UI Engineering:** Crafting performant user experiences with **Flutter**, **React**, and **HTML5 Canvas / Fabric.js** for real-time interactive graphic editors.
-- 🗄️ **Data & Infrastructure:** Relational modeling with **PostgreSQL & MySQL**, ultra-fast caching via **Redis**, and containerized deployments using **Docker & Nginx**.
 
 ---
 
@@ -96,6 +131,15 @@ developer = {
         <a href="https://greeting-cards.premiumasp.net/"><b>🔗 Visit Live Platform</b></a> &nbsp;|&nbsp; 
         <a href="https://greeting-cards.premiumasp.net/editor"><b>🎨 Live Canvas Editor</b></a>
       </p>
+      <details>
+        <summary><b>🔍 Architectural Deep Dive &amp; Engineering Solutions</b></summary>
+        <br/>
+        <ul>
+          <li><b>The Challenge:</b> Rendering high-resolution Canvas exports (300 DPI) and bidirectional Arabic typography directly in browser canvas without performance drops or memory leaks on mobile devices.</li>
+          <li><b>Engineering Solution:</b> Engineered an optimized <code>Fabric.js</code> object lifecycle pool. Separated text rendering layers from background rasterization. Offloaded heavy image compression to asynchronous server-side queues in <b>Laravel 12</b> with thumbnail caching in <b>Redis</b>.</li>
+          <li><b>Key Stack:</b> <code>Laravel 12</code> • <code>PHP 8.3</code> • <code>Fabric.js</code> • <code>MySQL</code> • <code>Redis</code>.</li>
+        </ul>
+      </details>
     </td>
   </tr>
 </table>
@@ -121,6 +165,15 @@ developer = {
         <a href="https://github.com/eng-abdulhmeed/telegram-bot"><b>💻 GitHub Repository</b></a> &nbsp;|&nbsp; 
         <a href="https://t.me/TomNumbot"><b>⚡ Test Bot (@TomNumbot)</b></a>
       </p>
+      <details>
+        <summary><b>🔍 Architectural Deep Dive &amp; Engineering Solutions</b></summary>
+        <br/>
+        <ul>
+          <li><b>The Challenge:</b> Ensuring zero race conditions and sub-second response times under burst loads of incoming Telegram webhook updates while awaiting real-time SMS arrival and cryptocurrency confirmation.</li>
+          <li><b>Engineering Solution:</b> Architected an asynchronous event-driven system with <b>Python 3.12</b> and <b>aiogram 3</b>. Integrated <b>Redis</b> as an in-memory finite state machine (FSM) to handle concurrent user sessions. Transactions are strictly isolated within <b>PostgreSQL</b> ACID boundaries. Orchestrated through <b>Docker</b> containers with auto-recovery health checks.</li>
+          <li><b>Key Stack:</b> <code>Python 3.12</code> • <code>aiogram 3.x</code> • <code>PostgreSQL</code> • <code>Redis</code> • <code>Docker</code> • <code>Cryptomus API</code>.</li>
+        </ul>
+      </details>
     </td>
   </tr>
 </table>
@@ -145,6 +198,15 @@ developer = {
         <a href="https://github.com/eng-abdulhmeed/MyProjectNawwar"><b>💻 GitHub Repository</b></a> &nbsp;|&nbsp; 
         <a href="https://eng-abdulhmeed.github.io/me/"><b>🌐 Case Study in Portfolio</b></a>
       </p>
+      <details>
+        <summary><b>🔍 Architectural Deep Dive &amp; Engineering Solutions</b></summary>
+        <br/>
+        <ul>
+          <li><b>The Challenge:</b> Designing a scalable multi-role permissions matrix (students, educators, admins) with real-time academic resource streaming and metrics tracking.</li>
+          <li><b>Engineering Solution:</b> Implemented a clean decoupled MVC pattern with Role-Based Access Control (RBAC) middleware, dynamic analytical queries, and a modern responsive interface.</li>
+          <li><b>Key Stack:</b> <code>Full-Stack</code> • <code>RESTful APIs</code> • <code>Relational DB</code> • <code>Bootstrap 5</code>.</li>
+        </ul>
+      </details>
     </td>
   </tr>
 </table>
@@ -155,6 +217,7 @@ developer = {
 
 <div align="center">
 
+<!-- Live Animated Contribution Snake -->
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/eng-abdulhmeed/eng-abdulhmeed/output/github-contribution-grid-snake-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/eng-abdulhmeed/eng-abdulhmeed/output/github-contribution-grid-snake.svg" />
@@ -163,7 +226,7 @@ developer = {
 
 <br/><br/>
 
-<!-- Verified High-Speed Demolab Streak Stats (Rock-Solid 200 OK) -->
+<!-- Verified High-Speed Demolab Streak Stats -->
 <a href="https://github.com/eng-abdulhmeed">
   <img src="https://streak-stats.demolab.com/?user=eng-abdulhmeed&theme=tokyonight&hide_border=true&background=090d16&ring=00F0FF&fire=00F0FF&currStreakNum=ffffff&sideNums=ffffff&currStreakLabel=00F0FF&sideLabels=00F0FF&dates=8b949e&border_radius=12" width="700" alt="GitHub Streak Stats" />
 </a>
