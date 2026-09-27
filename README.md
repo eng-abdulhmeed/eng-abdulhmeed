@@ -10,8 +10,6 @@
 
 <br/>
 
-[![Location](https://img.shields.io/badge/Location-Sana'a%2C_Yemen_%F0%9F%87%BE%F0%9F%87%AA-090d16?style=flat-square&logo=googlemaps&logoColor=00F0FF)](https://github.com/eng-abdulhmeed)
-&nbsp;
 [![Status](https://img.shields.io/badge/Status-Available_for_Work_%F0%9F%9F%A2-090d16?style=flat-square)](https://github.com/eng-abdulhmeed)
 &nbsp;
 [![Portfolio](https://img.shields.io/badge/Portfolio-Live_Website-090d16?style=flat-square&logo=googlechrome&logoColor=00F0FF)](https://eng-abdulhmeed.github.io/me/)
